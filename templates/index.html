@@ -1,92 +1,101 @@
 {% extends "_layouts/_master" %}
 
-{% block content %}
-<!--****************
-Navigation
-****************-->
-  <nav class="main-nav">
-    <!-- <h1>Spencer Abbott</h1> -->
-    <section class="navigation-container">
-      <!-- Animate a hover state. Subtle but unique. Helpful. Possibl add CSS transitions to pages via CSS-Tricks-->
-      <a href="#">Home</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
+  {% block content %}
+<div class="home_backround">
+  <!--****************
+  Navigation Partial
+  ****************-->
+  <nav class="main_nav">
+    <header class="main_nav--header">
+      <a class="logo" href="{{ siteUrl }}" alt="Spencer Abbott"><img src="/assets/images/Logo-Temp.png"></h1></a>
+      <h3 class="main_nav-sub_header">Front End Development & UX Design</h3>
+    </header>
+    <section class="navigation_container">
+      <!-- Animate a hover state. Subtle but unique. Helpful. Possibly add CSS transitions to pages via CSS-Tricks-->
+      <a href="{{ siteUrl }}#work">Work</a>
+      <a href="{{ siteUrl }}#about">About</a>
+      <a href="{{ siteUrl }}blog">Blog</a>
     </section>
   </nav>
 
 
 
-<!--****************
-Header
-****************-->
-  <section class="welcome-wrapper">
+  <!--****************
+  Header Banner Partial
+  ****************-->
+  <section class="welcome_wrapper">
     <section class="welcome">
-      <h1>I can help you Internet.</h1>
-      <a class="button">Sign Me Up</a>
-      <a class="button">Prove it</a>
+      <h2><small>I can help you</small><br>Internet.</h2>
     </section>
+    <aside class="welcome_email">
+      <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>
+    </aside>
   </section>
+</div>
 
 
 
 <!--****************
-Featured Work
+Work Partial
 ****************-->
-<!--   <section class="featured-work">
-    <h1>Featured Work</h1>
-    <article>
-      <h2>Example One</h2>
-      <p>Details About this sweet example.</p>
-    </article>
-    <article>
-      <h2>Example Two</h2>
-      <p>Details About this sweet example.</p>
-    </article>
-    <article>
-      <h2>Example Three</h2>
-      <p>Details About this sweet example.</p>
-    </article>
-    <article>
-      <h2>Example Four</h2>
-      <p>Details About this sweet example.</p>
-    </article>
-  </section> -->
+<section class="work_container">
+  <h1 class="work_title">Featured Work</h1>
+  <article class="work-example">
+    <h2>spencerabbott.me</h2>
+    <p>Details About this sweet example.</p>
+  </article>
+  <article class="work_example">
+    <h2>keylife.org</h2>
+    <p>Details About this sweet example.</p>
+  </article>
+  <article class="work_example">
+    <h2>lydig.com</h2>
+    <p>Details About this sweet example.</p>
+  </article>
+</section>
 
 
 
 <!--****************
-Featured Clients
+About Partial
 ****************-->
-<!--   <section class="featured-clients">
-    <h1>Clients</h1>
-    <p>This is where I break it down. Delete?</p>
-  </section>
- -->
-
-
-<!--****************
-Featured Skills
-****************-->
-  <section class="featured-skills">
-<!--     <h1>Skills</h1>
-    <p>Expert:HTML5, CSS3, Sass (SCSS), Jquery, Javascript, Multiple CMS Platforms: Wordpress, ExpressionEngine, Craft. Ruby on Rails. Node.JS MySql Database. Git Version Control. Multi-Enviroment set ups (local, staging, production. CodeKit, Grunt, and Gulp. Photoshop. Blog Graphics. Web Design. Bootstrap, Bourbon, Bourbon neat.</p>
-    <p>Proficient: </p>
-  </section>
-
- -->
-
-
-<!--****************
-Footer
-****************-->
-<!--   <footer>
-    <p>This is my footer.</p>
-    <h3>Things I want to implment on this site:</h3>
+<section class="about_container">
+  <h1>About</h1>
+  <p>This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. </p>
+  <p>Expert:HTML5, CSS3, Sass (SCSS), Jquery, Javascript, Multiple CMS Platforms: Wordpress, ExpressionEngine, Craft. Ruby on Rails. Node.JS MySql Database. Git Version Control. Multi-Enviroment set ups (local, staging, production. CodeKit, Grunt, and Gulp. Photoshop. Blog Graphics. Web Design. Bootstrap, Bourbon, Bourbon neat.</p>
+  <p>Proficient: </p>
+  <aside>
+    <h3>Things I Use</h3>
     <ul>
-      <li>Responsive</li>
-      <li>Learn Some Javascript: stuff with the nav, opens to a certain size.</li>
-      <li>Hamburger Mobile Menu</li>
-      <li></li>
-    </ul> -->
-  </footer>
+      <li>This</li>
+      <li>That</li>
+      <li>The Other</li>
+      <li>This</li>
+      <li>That</li>
+      <li>The Other</li>
+      <li>This</li>
+      <li>That</li>
+      <li>The Other</li>
+    </ul>
+  </aside>
+</section>
+
+
+
+
+<!-- ****************
+Footer Partial
+**************** -->
+<footer>
+  <aside class="welcome_email">
+    <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>
+  </aside>
+  <section class="footer-list">
+    <ul>
+      <a href="#"><li>Work</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Blog</li></a>
+    </ul>
+  </section>
+</footer>
 {% endblock %}
