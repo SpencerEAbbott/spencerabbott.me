@@ -1,0 +1,20 @@
+// Page specific style includes
+
+.welcome-wrapper {
+  @include outer-container;
+  max-width: 100%;
+  @include radial-gradient($white, darken($white, 10%), darken($white, 13%), darken($white, 25%));
+  .welcome {
+    // background: $white;
+    @include outer-container;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5em 0;
+  }
+
+  .button {
+    margin: 0 1em;
+  }
+
+}

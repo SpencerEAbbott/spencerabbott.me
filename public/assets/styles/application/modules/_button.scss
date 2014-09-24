@@ -1,0 +1,10 @@
+.button {
+  padding: 1em 2em;
+  text-decoration: none;
+  color: $gray-dark;
+  border: 1px solid $gray-dark;
+  border-radius: .4em;
+  &:hover {
+    background: rgba($gray-dark, .1)
+  }
+}
