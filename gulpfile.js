@@ -154,7 +154,7 @@ gulp.task('clean', function() {
 });
 
 
-// Do the creep, ahhhhhhh! (http://youtu.be/tLPZmPaHme0?t=7s)
+// Gulp Watching Things
 gulp.task('watch', function() {
 
   // Listen on port 35729
@@ -179,3 +179,4 @@ gulp.task('watch', function() {
 
 // Gulp Default Task
 gulp.task('default', ['scss-lint', 'js-lint', 'scripts', 'fonts', 'image-min', 'watch']);
+// gulp.task('default', ['scss-lint', 'js-lint', 'scripts', 'fonts', 'watch']);

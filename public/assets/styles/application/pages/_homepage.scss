@@ -1,23 +1,104 @@
 // Page specific style includes
 
-.home_backround {
-  @include radial-gradient($white, darken($white, 10%), darken($white, 13%), darken($white, 25%));
+.home {
+  background: url('/assets/images/welcome-header.jpg');
+  background-size: cover;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  .home_backround {
+    @include radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), $fallback: rgba(0, 0, 0, .3));
+  }
 }
+
 
 .welcome_wrapper {
   @include outer-container;
   max-width: 100%;
   .welcome {
-    // background: $white;
     @include outer-container;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 5em 0;
+    margin-top: 5em;
   }
 
   .button {
     margin: 0 1em;
   }
 
+}
+
+.welcome_heading_text {
+  margin-top: 0;
+  font-size: 9vw;
+  line-height: .9;
+  color: $white;
+  small {
+    font-size: 63%;
+  }
+  @include media($small-medium) {
+    font-size: 5em;
+  }
+  @include media($mobile) {
+    font-size: 6em;
+  }
+}
+
+.welcome_email {
+  @include outer-container;
+  text-align: center;
+  margin-bottom: 3em;
+  .button {
+    color: white;
+    border-color: white;
+  }
+}
+
+
+.work {
+  @include radial-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .075), rgba(0, 0, 0, .2), $fallback: rgba(0, 0, 0, .15));
+  padding-bottom: 8em;
+
+  .work_container {
+    @include outer-container;
+    // background: red;
+  }
+
+  .featured_work_title {
+
+  }
+
+  .work_example {
+    @include span-columns(4);
+    background: rgba($black, .1);
+    padding: 1em;
+    @include media($mobile-medium) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+  .work_title {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+
+
+}
+
+
+.about {
+  @include radial-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .075), rgba(0, 0, 0, .2), $fallback: rgba(0, 0, 0, .35));
+  padding-bottom: 8em;
+
+  .about_container {
+    @include outer-container;
+  }
+}
+
+
+footer {
+  background: black;
+  .footer_container {
+    @include outer-container;
+  }
 }

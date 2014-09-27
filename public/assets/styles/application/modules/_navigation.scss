@@ -5,17 +5,18 @@
 
   .main_nav--header {
     @include span-columns(4);
+    margin-top: .8em;
     .logo {
       display: block;
       img {max-width: 100%;}
     }
     .main_nav-sub_header {
-      font-size: .8em;
-      text-align: left;
       margin: 0;
       padding: 0;
+      font-size: .8em;
+      text-align: left;
+      color: $white;
     }
-
   }
 
 
@@ -26,14 +27,17 @@
     flex-flow: row wrap;
     justify-content: flex-end;
     a {
-      padding: 1em 2em;
+      font-family: $headerfont;
+      font-weight: 800;
+      margin: 0 0 .9em 1em;
+      padding: 1em .3em .1em .3em;
       font-size: 1.3rem;
       color: $white;
       text-decoration: none;
-      font-weight: bold;
       transition: all .12s ease-in;
+      border-bottom: 2px solid transparent;
       &:hover {
-        background: $red;
+        border-color: $white;
       }
     }
   }

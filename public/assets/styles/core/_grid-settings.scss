@@ -17,11 +17,20 @@ $visual-grid-index: 'front';
 $visual-grid-opacity: 0.1;
 
 // Define your breakpoints
-// $x-large: new-breakpoint(min-width 1141px 12);
-// $large: new-breakpoint(min-width 769px max-width 1140px 8);
-// $medium: new-breakpoint(max-width 768px 8);
-// $small: new-breakpoint(max-width 480px 4);
-// $devices: new-breakpoint(max-width 768px 8);
+// breakpoints
+$mobile:  new-breakpoint(max-width 320px 2);
+$small:   new-breakpoint(min-width 321px max-width 640px);
+$medium:  new-breakpoint(min-width 641px max-width 890px);
+$large:   new-breakpoint(min-width 891px max-width 1050px);
+$xlarge:  new-breakpoint(min-width 1051px);
+
+$mobile-small:  new-breakpoint(max-width 640px);
+$mobile-medium: new-breakpoint(max-width 890px);
+$mobile-large: new-breakpoint(max-width 1050px);
+$small-medium:  new-breakpoint(min-width 321px max-width 890px);
+$medium-large:  new-breakpoint(min-width 641px max-width 1050px);
+$medium-xlarge:  new-breakpoint(min-width 641px);
+$large-xlarge:  new-breakpoint(min-width 891px);
 
 
 
