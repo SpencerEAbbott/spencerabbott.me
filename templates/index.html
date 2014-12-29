@@ -35,10 +35,12 @@
     <section class="welcome_wrapper">
       <section class="welcome">
         <h2 class="welcome_heading_text"><small>I can help you</small><br>Internet.</h2>
+        <h3 class="welcome--heading-text--tag">(It's not magic, just hard work.)</h3>
+        <aside class="welcome-buttons">
+          <a class="button" href="#work">Prove it.</a>
+          <a class="button" href="#work">I already want to e-mail you!</a>
+        </aside>
       </section>
-      <aside class="welcome_email">
-        <a class="button" href="mailto:SpencerEAbbott@gmail.com">Help me pay rent.</a>
-      </aside>
     </section>
   </div>
 </div>
@@ -49,35 +51,44 @@
 Work Partial
 ****************-->
 <div class="work" id="work">
-  <section class="work_container">
+  <section class="work--container">
     <h1 class="featured_work_title">Featured Work</h1>
-    <article class="work_example">
-      <h2 class="work_title">spencerabbott.me</h2>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-    </article>
-    <article class="work_example">
-      <h2 class="work_title">keylife.org</h2>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-    </article>
-    <article class="work_example">
-      <h2 class="work_title">lydig.com</h2>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-      <p>Details About this sweet example.</p>
-    </article>
+
+    <ul class="work--examples">
+
+      <li class="work--example work--example--spencerabbott">
+        <section class="work--example--words">
+          <h2 class="work--title">spencerabbott.me</h2>
+          <ul class="work--example--roles">
+            <li>Design</li>
+            <li>Development</li>
+          </ul>
+        </section>
+        <!-- <a class="button" href="">Check it out.</a> -->
+      </li>
+
+      <li class="work--example work--example--keylife">
+        <section class="work--example--words">
+          <h2 class="work--title">keylife.org</h2>
+          <ul>
+            <li>Re-Design</li>
+            <li>Development</li>
+          </ul>
+        </section>
+        <!-- <a class="button" href="">Check it out.</a> -->
+      </li>
+
+      <li class="work--example work--example--cannatransact">
+        <section class="work--example--words">
+          <h2 class="work--title">cannatransact.com</h2>
+          <ul>
+            <li>Development</li>
+          </ul>
+        </section>
+          <!-- <a class="button" href="">Check it out.</a> -->
+      </li>
+
+    </ul>
   </section>
 </div>
 
@@ -89,8 +100,9 @@ About Partial
 <div class="about" id="about">
   <section class="about_container">
     <h1>About</h1>
-    <p>This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. This is a little about what I do and specialize in. </p>
-    <p>Expert:HTML5, CSS3, Sass (SCSS), Jquery, Javascript, Multiple CMS Platforms: Wordpress, ExpressionEngine, Craft. Ruby on Rails. Node.JS MySql Database. Git Version Control. Multi-Enviroment set ups (local, staging, production. CodeKit, Grunt, and Gulp. Photoshop. Blog Graphics. Web Design. Bootstrap, Bourbon, Bourbon neat.</p>
+    <p>Hello, I'm Spencer. I live in Seattle. I specialize in Front End Development. When I'm not busy coding and desiging, I play a lot of guitar and make people uncomfortable with jokes of bad timing. </p>
+    <h3>Most of my experience is in the following:</h3>
+    <p>Expert:HTML5, CSS3, Sass (SCSS), Jquery, Javascript, Multiple CMS Platforms: Wordpress, ExpressionEngine, Craft. Ruby on Rails. Node.JS MySql Database. Git Version Control. Multi-Enviroment set ups (local, staging, production). CodeKit, Grunt, and Gulp. Photoshop. Blog Post Graphics. Web Design. Bootstrap, Bourbon, Bourbon neat.</p>
     <p>Proficient: </p>
     <aside>
       <h3>Things I Use</h3>
@@ -115,6 +127,7 @@ About Partial
 Footer Partial
 **************** -->
 <footer>
+  <h3 style="color: white;">It's not magic, just hard work.</h3>
   <div class="footer_container">
     <aside class="welcome_email">
       <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>

@@ -1,10 +1,19 @@
 .button {
+  display: inline-block;
   padding: 1em 2em;
   text-decoration: none;
-  color: $gray-dark;
-  border: 1px solid $gray-dark;
+  color: $white;
+  border: 1px solid $white;
   border-radius: .4em;
+  transition: all .2s ease-in;
   &:hover {
-    background: rgba($gray-dark, .1)
+    background: $white;
+    color: $black;
   }
+}
+
+.button--center {
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
 }

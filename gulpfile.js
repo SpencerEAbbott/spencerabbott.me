@@ -158,10 +158,10 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
 
   // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.log(err);
-    }
+  // server.listen(35729, function (err) {
+  //   if (err) {
+  //     return console.log(err);
+  //   }
 
     // Watch .scss files
     gulp.watch(SRC + '/styles/**/*.scss', ['scss-lint', 'styles']);
@@ -170,7 +170,7 @@ gulp.task('watch', function() {
     gulp.watch(SRC + '/js/*.js', ['js-lint', 'scripts']);
 
     // Watch image files
-    gulp.watch( SRC + '/images/**/*', ['image-min']);
+    gulp.watch(SRC + '/images/**/*', ['image-min']);
 
   });
 
@@ -180,3 +180,10 @@ gulp.task('watch', function() {
 // Gulp Default Task
 gulp.task('default', ['scss-lint', 'js-lint', 'scripts', 'fonts', 'image-min', 'watch']);
 // gulp.task('default', ['scss-lint', 'js-lint', 'scripts', 'fonts', 'watch']);
+
+
+// Handle the error
+function errorHandler (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
