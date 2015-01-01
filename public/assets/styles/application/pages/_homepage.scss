@@ -22,8 +22,6 @@
   height: 100vh;
   .welcome {
     @include outer-container;
-    // display: flex;
-    // justify-content: center;
     margin-top: 5em;
   }
 }
@@ -37,11 +35,8 @@
   small {
     font-size: 63%;
   }
-  @include media($small-medium) {
-    font-size: 5em;
-  }
-  @include media($mobile) {
-    font-size: 6em;
+  @include media($mobile-medium) {
+    font-size: 18vw;
   }
 }
 
@@ -51,11 +46,8 @@
   font-size: 2vw;
   line-height: .9;
   color: $white;
-  @include media($small-medium) {
-    font-size: 5em;
-  }
-  @include media($mobile) {
-    font-size: 6em;
+  @include media($mobile-medium) {
+    font-size: 6vw;
   }
 }
 
@@ -65,8 +57,6 @@
     justify-content: center;
     .button {
       margin: 0 1em;
-      // display: inline-block;
-      // text-align: center;
     }
   }
 
@@ -79,6 +69,11 @@
 
 
 .work {
+
+  :focus {
+  outline: 0;
+  }
+
   @include radial-gradient(rgba($white, .05), rgba($white, .01), rgba($white, .3), $fallback: $white);
   padding-bottom: 8em;
   min-height: 100vh;
@@ -114,8 +109,7 @@
   .work--example {
     @include span-columns(4);
     position: relative;
-    height: calc(60vh);
-    min-height: 20em;
+    height: 18vw;
     padding: 1em;
     background-position: 20% 20%;
     background-size: cover;
@@ -128,9 +122,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      @include radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .3), rgba(0, 0, 0, .1), $fallback: rgba(0, 0, 0, .3));
-      // background: $black;
-      // opacity: 0.4;
+      background-color: rgba($black, .4);
+      @include transition(all .35s ease-in);
+      webkit-transition: all .35s ease-in;
+      transition: all .35s ease-in;
       border-radius: inherit;
     }
     @include media($mobile-medium) {
@@ -138,37 +133,98 @@
       @include shift(2);
       margin-bottom: 2em;
     }
+    @include media($mobile-medium) {
+      height: 35vw;
+    }
+
+
+    &:hover::before {
+      background-color: rgba($black, .85);
+    }
+
+    & .work--example--roles {
+      webkit-transition: all .35s ease-in;
+      transition: all .35s ease-in;
+      @include transition(all .35s ease-in);
+    }
+
+    &:hover .work--example--words {
+      top: 50%;
+      @include transform(translatey(-50%));
+    }
+
+    &:hover .work--example--roles {
+      opacity: 1;
+    }
 
   }
 
 
   .work--example--spencerabbott  {;
-    background-image: url('/assets/images/site-examples/spencerabbott.me.png');
+    background-image: url('/assets/images/site-examples/work--examples--spencerabbott.me.jpg');
 
   }
   .work--example--keylife  {;
-    background-image: url('/assets/images/site-examples/keylife.org.png');
+    background-image: url('/assets/images/site-examples/work--examples--keylife.org.jpg');
   }
   .work--example--cannatransact  {;
-    background-image: url('/assets/images/site-examples/cannatransact.com.png');
+    background-image: url('/assets/images/site-examples/work--examples--cannatransact.com.jpg');
+  }
+
+  // selects all tabs begning with #tab-
+  a[href^="#tabs-"] {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  // Allows tabs to work when in breaks to single column. inline display: block takes up entire area.
+  [id^="tabs-"]  {
+    @include media($mobile-medium) {
+      // display: inline-block !important;
+    }
   }
 
 
   .work--example--words {
-    display: inline-block;
+    display: block;
     position: relative;
-    top: 50%;
-    @include transform(translatey(-50%));
+    top: calc(100% - 2em);
+    @include transform(translatey(0%));
     color: $white;
+    @include transition(all .35s ease-in);
+    webkit-transition: all .35s ease-in;
+    transition: all .35s ease-in;
+    .work-example:hover &{
+      height: 100%;
+    }
+  }
+
+  .work--example--details--container {
+    @include outer-container;
+    @include media($large-xlarge) {
+      max-width: 90vw;
+    }
   }
 
   .work--title {
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 0;
-    &:after {
+    text-shadow: 2px 3px 2px rgba($black, .4);
+  }
+
+  .work--example--roles {
+    opacity: 0;
+    @include transition(all .35s ease-in);
+    webkit-transition: all .35s ease-in;
+    transition: all .35s ease-in;
+    &:before {
       content: "";
       display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
       height: 2px;
       background: $white;
       width: 80%;
@@ -185,6 +241,13 @@
     @extend .button--center;
   }
 }
+
+
+.work--example--details {
+  display: inline-block;
+}
+
+
 
 
 .about {
@@ -216,6 +279,8 @@ text-decoration: none;
 color: #fefefe;
 border: 1px solid #fefefe;
 border-radius: .4em;
+@include transition(all .2s ease-in);
 -webkit-transition: all .2s ease-in;
 transition: all .2s ease-in;
 }
+

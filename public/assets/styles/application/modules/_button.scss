@@ -10,10 +10,34 @@
     background: $white;
     color: $black;
   }
+  &:hover .button--down-arrow:before {
+    border-top-color: $black;
+  }
 }
 
 .button--center {
   position: relative;
   left: 50%;
   transform: translatex(-50%);
+}
+
+
+.button--down-arrow {
+
+  &:before {
+    // display: inline-block;
+    display: table;
+    top: .5em;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    padding-top: 0.75em;
+    content: "";
+    border-top: .75em solid $white;
+    border-right: .5em inset rgba(255,255,255,0);
+    border-left: .5em inset rgba(255,255,255,0);
+    -moz-transform: scale(0.9999);
+    margin-bottom: -.5em;
+    transition: all .2s ease-in;
+  }
 }

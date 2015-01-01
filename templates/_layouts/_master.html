@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Meta Tags -->
-    {% include "_partials/_meta-tags" %}
+  <!-- Meta Tags -->
+  {% include "_partials/_meta-tags" %}
 
-    <!-- Get Ya Style On! -->
-    <link rel="stylesheet" href="/dist/styles/app.min.css">
+  <!-- Get Ya Style On! -->
+  <link rel="stylesheet" href="/dist/styles/app.min.css">
+
+
+
+
+
+
+  {% if craft.config.devMode %}
+  <script src="/dist/js/main.js"></script>
+  {% else %}
+  <script src="/dist/js/main.min.js"></script>
+  {% endif %}
+
+<!-- Tabs Testing, are you working? -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+
+    <!-- Tabs for work examples documentation, need to load this in properly: http://api.jqueryui.com/tabs/ -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script>
+      // Iniitalize Tabs
+      $(function() {
+        $( "#tabs" ).tabs();
+      });
+
+    </script>
+
+
+
+  <!-- Smooth Scroll -->
+  <script type="text/javascript">
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 800);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+
 
     <!-- Webfonts -->
     <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
@@ -23,9 +71,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="-----icons/apple-touch-icon-57-precomposed.png">
 
     <link rel="home" href="{{ siteUrl }}" />
+
   </head>
 
   <body>
+
 
     <!--[if lt IE 9]>
       <div class="browsehappy">
@@ -33,13 +83,12 @@
       </div>
     <![endif]-->
 
+
+
+
     {% block content %}
     {% endblock %}
 
-    {% if craft.config.devMode %}
-    <script src="/dist/js/main.js"></script>
-    {% else %}
-    <script src="/dist/js/main.min.js"></script>
-    {% endif %}
+
   </body>
 </html>

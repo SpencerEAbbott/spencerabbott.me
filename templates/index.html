@@ -5,26 +5,53 @@
 
 
   {% block content %}
+
+
+
 <div class="home">
   <div class="home_backround">
 
-
   <!-- Simple site I can reference -->
   <!-- https://brettstrikesback.com/ -->
+
+
     <!--****************
     Navigation Partial
     ****************-->
     <nav class="main_nav">
       <header class="main_nav--header">
-        <a class="logo" href="{{ siteUrl }}" alt="Spencer Abbott"><img src="/assets/images/Logo-Temp.png"></h1></a>
-        <h3 class="main_nav-sub_header">Front End Development & UX Design</h3>
+        <a href="{{ siteUrl }}" alt="Spencer Abbott">
+          <svg version="1.1" id="header-logo" x="0px" y="0px"
+              viewBox="0 0 830.5 168.171" enable-background="new 0 0 830.5 168.171" xml:space="preserve">
+            <text transform="matrix(1 0 0 1 0 92.4751)" font-family="'Raleway-Black'" font-size="108.1585">Spencer Abbott</text>
+            <text transform="matrix(1 0 0 1 1.0039 156.4995)" font-family="'Raleway-Bold'" font-size="50.965">Front End Delopment • UX Design</text>
+          </svg>
+        </a>
+
       </header>
-      <section class="navigation_container">
+
+      <!-- Desktop Menu -->
+      <section class="deskop-navigation--container">
         <!-- Animate a hover state. Subtle but unique. Helpful. Possibly add CSS transitions to pages via CSS-Tricks-->
-        <a href="{{ siteUrl }}#work">Work</a>
-        <a href="{{ siteUrl }}#about">About</a>
-        <a href="{{ siteUrl }}blog">Blog</a>
+        <a class="desktop-nav-item" href="{{ siteUrl }}#work">Work</a>
+        <a class="desktop-nav-item"href="{{ siteUrl }}#about">About</a>
+        <a class="desktop-nav-item" href="{{ siteUrl }}blog">Blog</a>
+
+
+      <div class="mobile-navigation--container">
+        <input id="menu" type="checkbox" name="menu" class="HiddenCheckbox"/>
+        <label for="menu" class="MenuIcon"></label>
+        <nav class="Menu">
+          <ul class="Menu-list">
+            <li> <a  href="{{ siteUrl }}#work"  class="Menu-link">Work</a></li>
+            <li> <a href="{{ siteUrl }}#about"  class="Menu-link">About</a></li>
+            <li> <a href="{{ siteUrl }}#"   class="Menu-link">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+
       </section>
+
     </nav>
 
 
@@ -37,8 +64,7 @@
         <h2 class="welcome_heading_text"><small>I can help you</small><br>Internet.</h2>
         <h3 class="welcome--heading-text--tag">(It's not magic, just hard work.)</h3>
         <aside class="welcome-buttons">
-          <a class="button" href="#work">Prove it.</a>
-          <a class="button" href="#work">I already want to e-mail you!</a>
+          <a class="button" href="#work">Here's my work<span class="button--down-arrow "></span></a>
         </aside>
       </section>
     </section>
@@ -50,47 +76,78 @@
 <!--****************
 Work Partial
 ****************-->
-<div class="work" id="work">
-  <section class="work--container">
-    <h1 class="featured_work_title">Featured Work</h1>
+<div id="tabs">
 
-    <ul class="work--examples">
+  <div class="work" id="work">
+    <section class="work--container">
+      <h1 class="featured_work_title">Featured Work</h1>
 
-      <li class="work--example work--example--spencerabbott">
-        <section class="work--example--words">
-          <h2 class="work--title">spencerabbott.me</h2>
-          <ul class="work--example--roles">
-            <li>Design</li>
-            <li>Development</li>
-          </ul>
+      <ul class="work--examples">
+        <li class="work--example work--example--spencerabbott">
+          <a href="#tabs-1">
+            <section class="work--example--words">
+              <h2 class="work--title">spencerabbott.me</h2>
+              <ul class="work--example--roles">
+                <li>Design</li>
+                <li>Development</li>
+              </ul>
+            </section>
+          </a>
+          <!-- <a class="button" href="#tabs-1">Check it out.</a> -->
+        </li>
+
+        <li class="work--example work--example--keylife">
+          <a href="#tabs-2">
+            <section class="work--example--words">
+              <h2 class="work--title">keylife.org</h2>
+              <ul class="work--example--roles">
+                <li>Re-Design</li>
+                <li>Development</li>
+              </ul>
+            </section>
+          </a>
+          <!-- <a class="button" href="#tabs-2">Check it out.</a> -->
+        </li>
+
+        <li class="work--example work--example--cannatransact">
+          <a href="#tabs-3">
+            <section class="work--example--words">
+              <h2 class="work--title">cannatransact.com</h2>
+              <ul class="work--example--roles">
+                <li>Development</li>
+              </ul>
+            </section>
+          </a>
+          <!-- <a class="button" href="#tabs-3">Check it out.</a> -->
+        </li>
+      </ul>
+
+      <section class="work--example--details">
+        <section class="work--example--details--container">
+          <div id="tabs-1">
+            <h2>SpencerAbbott.me</h2>
+            <p>Well, you're looking at it. I took on this porject to showcase my skill sand give me the ultimate sandbox for testing out new features I want to learn. </p>
+            <ul>
+              <li></li>
+            </ul>
+            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+          </div>
+          <div id="tabs-2">
+            <h2>KeyLife.org</h2>
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+          </div>
+          <div id="tabs-3">
+            <h2>Cannatransact.com</h2>
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+          </div>
         </section>
-        <!-- <a class="button" href="">Check it out.</a> -->
-      </li>
+      </section>
 
-      <li class="work--example work--example--keylife">
-        <section class="work--example--words">
-          <h2 class="work--title">keylife.org</h2>
-          <ul>
-            <li>Re-Design</li>
-            <li>Development</li>
-          </ul>
-        </section>
-        <!-- <a class="button" href="">Check it out.</a> -->
-      </li>
+    </section>
+  </div> <!-- /work -->
 
-      <li class="work--example work--example--cannatransact">
-        <section class="work--example--words">
-          <h2 class="work--title">cannatransact.com</h2>
-          <ul>
-            <li>Development</li>
-          </ul>
-        </section>
-          <!-- <a class="button" href="">Check it out.</a> -->
-      </li>
-
-    </ul>
-  </section>
-</div>
+</div> <!-- /#tabs -->
 
 
 
@@ -141,4 +198,15 @@ Footer Partial
     </section>
   </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
