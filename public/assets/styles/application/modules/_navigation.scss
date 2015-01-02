@@ -1,5 +1,8 @@
 .main_nav {
   @include outer-container;
+  @include media($large) {
+    padding: 0 3.5%;
+  }
 
 
 

@@ -22,7 +22,10 @@
   height: 100vh;
   .welcome {
     @include outer-container;
-    margin-top: 5em;
+    // margin-top: 5em;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
   }
 }
 
@@ -204,6 +207,8 @@
     @include outer-container;
     @include media($large-xlarge) {
       max-width: 90vw;
+      // I need to make this padding for all of them!
+      padding: 0 3em;
     }
   }
 

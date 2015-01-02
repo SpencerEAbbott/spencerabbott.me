@@ -84,9 +84,12 @@
 // ******************************
 
 .mobile-navigation--container {
-  display: inline-block;
-  margin: 20px;
-  float: right;
+  display: none;
+  @include media($mobile-medium) {
+    display: inline-block;
+    margin: 20px;
+    float: right;
+  }
 }
 
 .Menu {

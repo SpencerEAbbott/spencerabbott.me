@@ -14,10 +14,10 @@ $customDbConfig = array(
     'tablePrefix'   => 'craft',
 
     // Live database info
-    'server'    => 'localhost',
+    'server'    => '104.236.136.50',
     'user'      => 'root',
-    'password'  => 'root',
-    'database'  => 'spencer_craft_dev'
+    'password'  => 'HUiBUTxtQm',
+    'database'  => 'spencer_craft'
   ),
 
   // Dev database info
