@@ -1,58 +1,19 @@
-
-
 {% extends "_layouts/_master" %}
 
 
-
-  {% block content %}
-
+{% block content %}
 
 
 <div class="home">
   <div class="home_backround">
 
-  <!-- Simple site I can reference -->
-  <!-- https://brettstrikesback.com/ -->
+  {# Site I can reference
+   https://brettstrikesback.com/ #}
 
-
-    <!--****************
+    {# ****************
     Navigation Partial
-    ****************-->
-    <nav class="main_nav">
-      <header class="main_nav--header">
-        <a href="{{ siteUrl }}" alt="Spencer Abbott">
-          <svg version="1.1" id="header-logo" x="0px" y="0px"
-              viewBox="0 0 830.5 168.171" enable-background="new 0 0 830.5 168.171" xml:space="preserve">
-            <text transform="matrix(1 0 0 1 0 92.4751)" font-family="'Raleway-Black'" font-size="108.1585">Spencer Abbott</text>
-            <text transform="matrix(1 0 0 1 1.0039 156.4995)" font-family="'Raleway-Bold'" font-size="50.965">Front End Delopment • UX Design</text>
-          </svg>
-        </a>
-
-      </header>
-
-      <!-- Desktop Menu -->
-      <section class="deskop-navigation--container">
-        <!-- Animate a hover state. Subtle but unique. Helpful. Possibly add CSS transitions to pages via CSS-Tricks-->
-        <a class="desktop-nav-item" href="{{ siteUrl }}#work">Work</a>
-        <a class="desktop-nav-item"href="{{ siteUrl }}#about">About</a>
-        <a class="desktop-nav-item" href="{{ siteUrl }}blog">Blog</a>
-
-
-      <div class="mobile-navigation--container">
-        <input id="menu" type="checkbox" name="menu" class="HiddenCheckbox"/>
-        <label for="menu" class="MenuIcon"></label>
-        <nav class="Menu">
-          <ul class="Menu-list">
-            <li> <a  href="{{ siteUrl }}#work"  class="Menu-link">Work</a></li>
-            <li> <a href="{{ siteUrl }}#about"  class="Menu-link">About</a></li>
-            <li> <a href="{{ siteUrl }}#"   class="Menu-link">Blog</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      </section>
-
-    </nav>
+    **************** #}
+    {% include "_partials/_navigation" %}
 
 
 
@@ -74,74 +35,167 @@
 
 
 <!--****************
-Work Partial
+Work
 ****************-->
 <div id="tabs">
 
   <div class="work" id="work">
-    <section class="work--container">
-      <h1 class="featured_work_title">Featured Work</h1>
+    <section class="work--featured-background">
+      <section class="work--container">
+        <h1 class="featured_work_title">Featured Work</h1>
 
-      <ul class="work--examples">
-        <li class="work--example work--example--spencerabbott">
-          <a href="#tabs-1">
-            <section class="work--example--words">
-              <h2 class="work--title">spencerabbott.me</h2>
-              <ul class="work--example--roles">
-                <li>Design</li>
-                <li>Development</li>
-              </ul>
-            </section>
-          </a>
-          <!-- <a class="button" href="#tabs-1">Check it out.</a> -->
-        </li>
+        <ul class="work--examples">
+          <li class="work--example work--example--spencerabbott">
+            <a href="#tabs-1">
+              <section class="work--example--words">
+                <h2 class="work--title">spencerabbott.me</h2>
+              </section>
+            </a>
+            {# <a class="button" href="#tabs-1">Check it out.</a> #}
+          </li>
 
-        <li class="work--example work--example--keylife">
-          <a href="#tabs-2">
-            <section class="work--example--words">
-              <h2 class="work--title">keylife.org</h2>
-              <ul class="work--example--roles">
-                <li>Re-Design</li>
-                <li>Development</li>
-              </ul>
-            </section>
-          </a>
-          <!-- <a class="button" href="#tabs-2">Check it out.</a> -->
-        </li>
+          <li class="work--example work--example--keylife">
+            <a href="#tabs-2">
+              <section class="work--example--words">
+                <h2 class="work--title">keylife.org</h2>
+              </section>
+            </a>
+            {# <a class="button" href="#tabs-2">Check it out.</a> #}
+          </li>
 
-        <li class="work--example work--example--cannatransact">
-          <a href="#tabs-3">
-            <section class="work--example--words">
-              <h2 class="work--title">cannatransact.com</h2>
-              <ul class="work--example--roles">
-                <li>Development</li>
-              </ul>
-            </section>
-          </a>
-          <!-- <a class="button" href="#tabs-3">Check it out.</a> -->
-        </li>
-      </ul>
+          <li class="work--example work--example--cannatransact">
+            <a href="#tabs-3">
+              <section class="work--example--words">
+                <h2 class="work--title">cannatransact.com</h2>
+              </section>
+            </a>
+            {# <a class="button" href="#tabs-3">Check it out.</a> #}
+          </li>
+        </ul>
+      </section> {# /work--container #}
+    </section>
+
 
       <section class="work--example--details">
         <section class="work--example--details--container">
+
           <div id="tabs-1">
-            <h2>SpencerAbbott.me</h2>
-            <p>Well, you're looking at it. I took on this porject to showcase my skill sand give me the ultimate sandbox for testing out new features I want to learn. </p>
-            <ul>
-              <li></li>
-            </ul>
-            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-          </div>
+            <section class="work--container">
+              <header class="example--header">
+                <h2 class="example--title">SpencerAbbott.me</h2>
+                <h3 class="example--roles"><span>Design and Development</span></h3>
+              </header>
+
+              <section class="example--visuals">
+                <img src="/assets/images/site-examples/work--examples--spencerabbott.me.jpg">
+              </section>
+
+              <article class="example--details">
+                  <p class="example--body">That's right, it was <i>me</i> that built this portfolio website with my name on it. I took on this project to showcase my skill sand give me the ultimate sandbox for testing out new features I want to learn. Coffee, Design, Coffee, Code, Coffee, Refactor, Repeat.</p>
+
+                  <aside class="example--tools">
+                    <h3 class="example--tools--title">Services, Languages, and Tools Used:</h3>
+                    <ul class="example--tools--list">
+                      <li>Craft CMS</li>
+                      <li>LAMP Stack</li>
+                      <li>HTML5</li>
+                      <li>Twig (PHP)</li>
+                      <li>SASS/CSS3</li>
+                      <li>Javascript</li>
+                      <li>JQuery</li>
+                      <li>Gulp</li>
+                      <li>Bourbon</li>
+                      <li>Bourbon Neat</li>
+                      <li>BEM & SMACCS</li>
+                      <li>Digital Ocean</li>
+                      <li>Local Development</li>
+                    </ul>
+                  </aside>
+                </article>
+                <div class="button-container">
+                  <a href="#" class="button--example">View the Code</a>
+                </div>
+            </section> {# work--example--details--container #}
+          </div> {# /tab-1 div #}
+
+
+
           <div id="tabs-2">
-            <h2>KeyLife.org</h2>
-            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-          </div>
+            <header class="example--header">
+              <h2 class="example--title">KeyLife.org</h2>
+              <h3 class="example--roles"><span>Design and Development</span></h3>
+            </header>
+
+            <section class="example--visuals">
+              <img src="/assets/images/site-examples/work--examples--keylife.org.jpg">
+            </section>
+
+            <article class="example--details">
+                <p class="example--body">I took on all development and design once the application had been delivered by an agency. I refined the design and paid special attention to the Programs aside, navigation, and the audio player. I then coded it all in. Most all the graphics and images on the site are designed and curated by me. I also set them up with a new SSD server to improve site speed. To see where the site started, click here.</p>
+                <aside class="example--tools">
+                  <h3 class="example--tools--title">Services, Languages, and Tools Used:</h3>
+                  <ul class="example--tools--list">
+                    <li>Expression Engine</li>
+                    <li>LAMP Stack</li>
+                    <li>HTML5</li>
+                    <li>CodeIgniter (Craft's PHP)</li>
+                    <li>SASS/CSS3</li>
+                    <li>Javascript</li>
+                    <li>JQuery</li>
+                    <li>Gulp and CodeKit</li>
+                    <li>Bourbon</li>
+                    <li>Bourbon Neat</li>
+                    <li>BEM and SMACCS approaches to css</li>
+                    <li>Digital Ocean</li>
+                    <li>Local Development</li>
+                  </ul>
+                </aside>
+              </article>
+              <div class="button-container">
+                <a href="#" class="button--example">Visit the Site</a>
+              </div>
+          </div> {# /tab-2 div #}
+
+
           <div id="tabs-3">
-            <h2>Cannatransact.com</h2>
-            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+
+
+            <header class="example--header">
+              <h2 class="example--title">Cannatransact.com</h2>
+              <h3 class="example--roles"><span>Development</span></h3>
+            </header>
+
+            <section class="example--visuals">
+              <img src="/assets/images/site-examples/work--examples--cannatransact.com.jpg">
+            </section>
+
+            <article class="example--details">
+              <p class="example--body">On this project I got to just focus in on front-end development. I love these oppurtunities. </p>
+              <aside class="example--tools">
+                <h3 class="example--tools--title">Services, Languages, and Tools Used:</h3>
+                <ul class="example--tools--list">
+                  <li>Wordpress</li>
+                  <li>LAMP Stack</li>
+                  <li>HTML5</li>
+                  <li>PHP</li>
+                  <li>SASS/CSS3</li>
+                  <li>Javascript</li>
+                  <li>Gulp</li>
+                  <li>Bourbon</li>
+                  <li>Bourbon Neat</li>
+                  <li>BEM and SMACCS approaches to css</li>
+                  <li>Media Temple</li>
+                  <li>Local Development</li>
+                </ul>
+              </aside>
+            </article>
+            <div class="button-container">
+              <a href="#" class="button--example">Visit the Site</a>
+            </div>
+          </div>{# /tab-3 div #}
+          <div class="button-container">
+            <a href="#tabs" class="button--example">More Work Examples</a>
           </div>
-        </section>
       </section>
 
     </section>
@@ -152,31 +206,15 @@ Work Partial
 
 
 <!--****************
-About Partial
+About
 ****************-->
-<div class="about" id="about">
-  <section class="about_container">
-    <h1>About</h1>
-    <p>Hello, I'm Spencer. I live in Seattle. I specialize in Front End Development. When I'm not busy coding and desiging, I play a lot of guitar and make people uncomfortable with jokes of bad timing. </p>
-    <h3>Most of my experience is in the following:</h3>
-    <p>Expert:HTML5, CSS3, Sass (SCSS), Jquery, Javascript, Multiple CMS Platforms: Wordpress, ExpressionEngine, Craft. Ruby on Rails. Node.JS MySql Database. Git Version Control. Multi-Enviroment set ups (local, staging, production). CodeKit, Grunt, and Gulp. Photoshop. Blog Post Graphics. Web Design. Bootstrap, Bourbon, Bourbon neat.</p>
-    <p>Proficient: </p>
-    <aside>
-      <h3>Things I Use</h3>
-      <ul>
-        <li>This</li>
-        <li>That</li>
-        <li>The Other</li>
-        <li>This</li>
-        <li>That</li>
-        <li>The Other</li>
-        <li>This</li>
-        <li>That</li>
-        <li>The Other</li>
-      </ul>
-    </aside>
-  </section>
-</div>
+<section class="about" id="about">
+  <article class="about_container">
+    <h1 class="about--title">About</h1>
+    <p class="about--body">Hello, I'm Spencer. I live in Ballard, Washington. I specialize in Front End Development. In addition, I provide web design services and have managed re-branding projects and content strategy. If you have specific questions about my experience, <a href="{{ siteUrl }}/contact">ask away!</a></p>
+    <p class="about--body">When I'm not busy coding, <a target="_blank" href="http://citizensandsaints.com">I play a lot of guitar</a>, make things out of wood, and kick it OG style with my wife. Go hawks.</p>
+  </article>
+</section>
 
 
 
@@ -184,8 +222,8 @@ About Partial
 Footer Partial
 **************** -->
 <footer>
-  <h3 style="color: white;">It's not magic, just hard work.</h3>
   <div class="footer_container">
+    <h3 style="color: white;">It's not magic, just hard work.</h3>
     <aside class="welcome_email">
       <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>
     </aside>

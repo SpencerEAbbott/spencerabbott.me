@@ -72,6 +72,11 @@
   left: 0;
 }
 
+// .Menu-link:active ~ .Menu,
+// .Menu-link:focus ~ .Menu {
+//   left : -100%;
+// }
+
 
 .HiddenCheckbox:checked ~ .Menu {
 
@@ -87,17 +92,19 @@
   display: none;
   @include media($mobile-medium) {
     display: inline-block;
-    margin: 20px;
     float: right;
   }
 }
 
 .Menu {
   display: inline-table;
+  position: fixed;
   background: rgba($black, .95);
   bottom: 0;
   left: -100%;
-  position: absolute;
+  // position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   -webkit-transition: left 0.4s;
@@ -106,6 +113,7 @@
     display: none;
   }
 }
+
 
 .Menu-list {
   list-style-type: none;

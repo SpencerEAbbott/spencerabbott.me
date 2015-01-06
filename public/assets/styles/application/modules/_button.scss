@@ -1,11 +1,19 @@
-.button {
+.button-base {
   display: inline-block;
   padding: 1em 2em;
   text-decoration: none;
-  color: $white;
-  border: 1px solid $white;
   border-radius: .4em;
   transition: all .2s ease-in;
+}
+
+
+// Here's a bunch of modules for my button-base
+// Extend away to make the button you need. Add a class to use in extensions. This way, you only use one class in markup
+
+.button {
+  @extend .button-base;
+  color: $white;
+  border: 1px solid $white;
   &:hover {
     background: $white;
     color: $black;
@@ -15,17 +23,16 @@
   }
 }
 
+
 .button--center {
   position: relative;
   left: 50%;
-  transform: translatex(-50%);
+  @include transform(translateX(-50%));
 }
 
 
 .button--down-arrow {
-
   &:before {
-    // display: inline-block;
     display: table;
     top: .5em;
     position: relative;
@@ -41,3 +48,4 @@
     transition: all .2s ease-in;
   }
 }
+

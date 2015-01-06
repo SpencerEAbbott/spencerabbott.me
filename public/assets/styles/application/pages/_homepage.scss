@@ -72,20 +72,13 @@
 
 
 .work {
-
-  :focus {
-  outline: 0;
-  }
-
-  @include radial-gradient(rgba($white, .05), rgba($white, .01), rgba($white, .3), $fallback: $white);
-  padding-bottom: 8em;
+  :focus {outline: 0;}
+  background-color: $white;
   min-height: 100vh;
-  // min-height: 33em;
     @include media($mobile-medium) {
       display: block;
       height: 100%;
     }
-
   ul {
     padding-left: 0;
     li {
@@ -95,11 +88,22 @@
     }
   }
 
+  .work--featured-background {
+    background-color: $blue-dark;
+    color: $white;
+    padding-bottom: 5em;
+    @include box-shadow(0px 2px 4px 1px rgba($gray-dark, 0.5));
+  }
+
   .work--container {
     @include outer-container;
     @include media($large-xlarge) {
       max-width: 90vw;
     }
+  }
+
+  .featured_work_title {
+    color: $white;
   }
 
   .work--examples {
@@ -113,8 +117,7 @@
     @include span-columns(4);
     position: relative;
     height: 18vw;
-    padding: 1em;
-    background-position: 20% 20%;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: .2em;
@@ -125,7 +128,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($black, .4);
+      background-color: rgba($white, .0);
       @include transition(all .35s ease-in);
       webkit-transition: all .35s ease-in;
       transition: all .35s ease-in;
@@ -142,22 +145,16 @@
 
 
     &:hover::before {
-      background-color: rgba($black, .85);
+      background-color: rgba($white, .9);
     }
 
-    & .work--example--roles {
-      webkit-transition: all .35s ease-in;
-      transition: all .35s ease-in;
-      @include transition(all .35s ease-in);
+    &:hover .work--title {
+      background: rgba($red, 1);
+      opacity: 1;
     }
+
 
     &:hover .work--example--words {
-      top: 50%;
-      @include transform(translatey(-50%));
-    }
-
-    &:hover .work--example--roles {
-      opacity: 1;
     }
 
   }
@@ -178,11 +175,13 @@
   a[href^="#tabs-"] {
     display: block;
     height: 100%;
+    width: 100%;
     text-decoration: none;
   }
 
   // Allows tabs to work when in breaks to single column. inline display: block takes up entire area.
   [id^="tabs-"]  {
+    width: 100%;
     @include media($mobile-medium) {
       // display: inline-block !important;
     }
@@ -192,49 +191,43 @@
   .work--example--words {
     display: block;
     position: relative;
-    top: calc(100% - 2em);
-    @include transform(translatey(0%));
+    text-align: center;
+    height: 100%;
     color: $white;
     @include transition(all .35s ease-in);
     webkit-transition: all .35s ease-in;
     transition: all .35s ease-in;
     .work-example:hover &{
-      height: 100%;
     }
   }
 
   .work--example--details--container {
     @include outer-container;
+    min-height: 100vh;
+    // I need to make this padding for all of them!
+    padding: 0 0 8em 0;
     @include media($large-xlarge) {
       max-width: 90vw;
-      // I need to make this padding for all of them!
-      padding: 0 3em;
+      padding: 0 3em 8em 3em;
     }
   }
 
   .work--title {
     font-size: 1.5em;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    @include transform(translatey(-50%));
     margin-top: 0;
     margin-bottom: 0;
-    text-shadow: 2px 3px 2px rgba($black, .4);
-  }
-
-  .work--example--roles {
+    padding: 1em;
+    background: rgba($red, .9);
+    border-radius: 2px;
+    @include box-shadow(inset 2px 2px 4px 1px rgba($black, .3));
     opacity: 0;
+    color: $white;
+
     @include transition(all .35s ease-in);
-    webkit-transition: all .35s ease-in;
-    transition: all .35s ease-in;
-    &:before {
-      content: "";
-      display: inline-block;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 2px;
-      background: $white;
-      width: 80%;
-      margin: .5em 0;
-    }
   }
 
 
@@ -250,17 +243,186 @@
 
 .work--example--details {
   display: inline-block;
+  width: 100%;
+}
+
+.example--header {
+
+
+  .example--title {
+    @include span-columns(8);
+    @include shift(2);
+    @include omega;
+    @include media($mobile-medium) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+    font-size: 4rem;
+    margin-bottom: .2em;
+    // color: $red;
+    @include media($mobile-medium) {
+      font-size: 2em;
+    }
+  }
+
+  .example--roles {
+
+    @include span-columns(8);
+    @include shift(2);
+    @include omega;
+    @include media($mobile-medium) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    font-size: 2rem;
+    margin-top: 0;
+    z-index: 2;
+    position: relative;
+    @include media($mobile-medium) {
+      font-size: 1.5rem;
+    }
+    & span {
+      padding: 0 1em;
+      background: white;
+    }
+    &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    margin-top: 3px;
+    height: 3px;
+    margin-top: .08em;
+    background-color: $red;
+    z-index: -1;
+    }
+  }
+
+}
+
+
+
+.example--visuals{
+  @include span-columns(6);
+  position: relative;
+
+  @include media($mobile-medium) {
+    @include span-columns(10);
+    @include shift(1);
+    @include omega;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    @include box-shadow(0 0 6px 2px rgba($gray-dark, .2));
+  }
+}
+
+.example--details {
+  @include span-columns(6);
+  @include omega;
+  @include media($mobile-medium) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+}
+
+
+.example--body {
+  font-size: 1em;
+}
+
+.example--tools {
+  @include span-columns(5 of 6);
+  @include shift(.5);
+
+
+  @include media($mobile-medium) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+
+  .example--tools--title {
+    font-size: 1em;
+    font-weight: 900;
+  }
+
+  ul.example--tools--list li{
+    display: inline-block;
+    text-align: center;
+    float: left;
+    width: 45%;
+    margin: 0.75% 2.5%;
+    // padding: .3em 0;
+    // border-bottom: 1px solid $black;
+    &:before {
+      content: '•';
+      padding: 0 .5em;
+      // &:last-of-type{ content: '';}
+    }
+  }
+}
+
+
+
+.button-container {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+
+.button--example {
+  @extend .button-base;
+  text-align: center;
+  margin-top: 1em;
+  border: 1px solid $black;
+  color: $black;
+  border-color: $black;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 }
 
 
 
 
+
+
+
+
 .about {
-  @include radial-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .075), rgba(0, 0, 0, .2), $fallback: rgba(0, 0, 0, .35));
+  // @include radial-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .075), rgba(0, 0, 0, .2), $fallback: rgba(0, 0, 0, .35));
+  background-color: $blue-light;
+  color: $white;
   padding-bottom: 8em;
 
   .about_container {
     @include outer-container;
+  }
+
+  .about--title, .about--body  {
+    @include span-columns(8);
+    @include shift(2);
+    @include omega;
+    color: $white;
+  }
+
+  .about--title {
+  }
+  .about--body  {
+    & a {
+      text-decoration: none;
+      font-weight: 800;
+      &:hover {
+        border-bottom: 1px solid $black;
+      }
+    }
   }
 }
 
