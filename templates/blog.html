@@ -23,9 +23,11 @@
     ****************-->
     <section class="welcome_wrapper">
       <section class="welcome">
-        <h2 class="welcome_heading_text"><small>I can help you</small><br>Internet.</h2>
+        <h2 class="welcome_heading_text"><small>This is a</small><br>BLOG</h2>
         <h3 class="welcome--heading-text--tag">(It's not magic, just hard work.)</h3>
-        <a class="button--arrow-down" href="#work"><svg class="icon-arrow-down"><use xlink:href="#icon-arrow-down"></use></svg></a>
+        <aside class="welcome-buttons">
+          <a class="button" href="#work">Here's my work<span class="button--down-arrow "></span></a>
+        </aside>
       </section>
     </section>
   </div>
@@ -39,6 +41,8 @@ Work
 
 <div id="tabs">
 
+
+
   <div class="work" id="work">
     <section class="work--featured-background">
       <section class="work--container">
@@ -51,6 +55,7 @@ Work
                 <h2 class="work--title">spencerabbott.me</h2>
               </section>
             </a>
+            {# <a class="button" href="#tabs-1">Check it out.</a> #}
           </li>
 
           <li class="work--example work--example--keylife">
@@ -59,6 +64,7 @@ Work
                 <h2 class="work--title">keylife.org</h2>
               </section>
             </a>
+            {# <a class="button" href="#tabs-2">Check it out.</a> #}
           </li>
 
           <li class="work--example work--example--cannatransact">
@@ -67,6 +73,7 @@ Work
                 <h2 class="work--title">cannatransact.com</h2>
               </section>
             </a>
+            {# <a class="button" href="#tabs-3">Check it out.</a> #}
           </li>
         </ul>
       </section> {# /work--container #}
@@ -110,8 +117,7 @@ Work
                   </aside>
                 </article>
                 <div class="button-container">
-                  {# Remove database and other stuff before showing the world! #}
-                  <a target="_blank" href="https://github.com/SpencerEAbbott/spencerabbott.me" class="button--example"><svg class="icon-code"><use xlink:href="#icon-code"></use></svg>View the Code</a>
+                  <a href="#" class="button--example">View the Code</a>
                 </div>
             </section> {# work--example--details--container #}
           </div> {# /tab-1 div #}
@@ -150,7 +156,7 @@ Work
                 </aside>
               </article>
               <div class="button-container">
-                <a href="http://keylife.org" class="button--example"><svg class="icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>Visit the Site</a>
+                <a href="#" class="button--example">Visit the Site</a>
               </div>
           </div> {# /tab-2 div #}
 
@@ -188,11 +194,11 @@ Work
               </aside>
             </article>
             <div class="button-container">
-              <a href="http://cannatransact.com" class="button--example"><svg class="icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>Visit the Site</a>
+              <a href="#" class="button--example">Visit the Site</a>
             </div>
           </div>{# /tab-3 div #}
           <div class="button-container">
-            <a href="#tabs" class="button--example"><svg class="icon-arrow-up"><use xlink:href="#icon-arrow-up"></use></svg>More Work Examples</a>
+            <a href="#tabs" class="button--example">More Work Examples</a>
           </div>
       </section>
 
@@ -211,18 +217,41 @@ About
     <h1 class="about--title">About</h1>
     <img class="about--spencer-image" src="/assets/images/spencer-abbott-profile-square.jpg">
     <section class="about--words">
-    <p class="about--body">Hello, I'm Spencer. I live in Seattle, Washington. I specialize in Front End Development. In addition, I provide web design services and have lead re-branding projects and content strategy. If you have specific questions about my experience, <a href="{{ siteUrl }}contact">ask away!</a></p>
-    <p class="about--body">When I'm not busy simultaneously coding and keeping Ballard coffee shops in business, <a target="_blank" href="http://citizensandsaints.com">I play a lot of guitar</a>, make things out of wood, and kick it OG style with my wife. Go hawks.</p>
-    <aside class="about--icon-links">
-      <a href="mailto:spencereabbott@gmail.com"><svg class="icon-arrow-up"><use xlink:href="#icon-mail2"></use></svg></a>
-      <a href="https://github.com/spencereabbott" target="_blank"><svg class="icon-arrow-up"><use xlink:href="#icon-github"></use></svg></a>
-      <a href="https://plus.google.com/+SpencerAbbott86" target="_blank"><svg class="icon-arrow-up"><use xlink:href="#icon-googleplus"></use></svg></a>
-      <a href="https://www.linkedin.com/in/SpencerEAbbott" target="_blank"><svg class="icon-arrow-up"><use xlink:href="#icon-linkedin"></use></svg></a>
-    </aside>
+    <p class="about--body">Hello, I'm Spencer. I live in Ballard, Washington. I specialize in Front End Development. In addition, I provide web design services and have managed re-branding projects and content strategy. If you have specific questions about my experience, <a href="{{ siteUrl }}/contact">ask away!</a></p>
+    <p class="about--body">When I'm not busy coding, <a target="_blank" href="http://citizensandsaints.com">I play a lot of guitar</a>, make things out of wood, and kick it OG style with my wife. Go hawks.</p>
     </section>
   </article>
 </section>
 
 
-{% endblock %}
 
+<!-- ****************
+Footer Partial
+**************** -->
+<footer>
+  <div class="footer_container">
+    <h3 style="color: white;">It's not magic, just hard work.</h3>
+    <aside class="welcome_email">
+      <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>
+    </aside>
+    <section class="footer-list">
+      <ul>
+        <a href="#"><li>Work</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Blog</li></a>
+      </ul>
+    </section>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

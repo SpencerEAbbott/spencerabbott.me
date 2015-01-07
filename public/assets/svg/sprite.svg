@@ -1,0 +1,77 @@
+<svg>
+  <defs>
+
+    <symbol id="svg--arrow-down-left">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--arrow-down-right">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--arrow-down">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--arrow-left">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--arrow-right">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--code">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--embed">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--facebook">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--file">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--github">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--github2">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--google">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--googleplus">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--instagram">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--linkedin">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--mail">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--mail2">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+    <symbol id="svg--twitter">
+      <path d="M24 32l-8-8 16-16-8-8-16 16-8-8v24z"></path>
+    </symbol>
+
+  </defs>
+</svg>

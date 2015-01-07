@@ -27,6 +27,9 @@
     top: 40%;
     transform: translateY(-50%);
   }
+  .button--arrow-down {
+
+  }
 }
 
 .welcome_heading_text {
@@ -54,14 +57,6 @@
   }
 }
 
-
-  .welcome-buttons {
-    display: flex;
-    justify-content: center;
-    .button {
-      margin: 0 1em;
-    }
-  }
 
 .welcome_email {
   @include outer-container;
@@ -152,12 +147,11 @@
       background: rgba($red, 1);
       opacity: 1;
     }
-
-
-    &:hover .work--example--words {
-    }
-
   }
+
+  // .work--example.ui-tabs-active {
+  //   opacity: .2;
+  // }
 
 
   .work--example--spencerabbott  {;
@@ -197,8 +191,6 @@
     @include transition(all .35s ease-in);
     webkit-transition: all .35s ease-in;
     transition: all .35s ease-in;
-    .work-example:hover &{
-    }
   }
 
   .work--example--details--container {
@@ -223,11 +215,12 @@
     padding: 1em;
     background: rgba($red, .9);
     border-radius: 2px;
-    @include box-shadow(inset 2px 2px 4px 1px rgba($black, .3));
     opacity: 0;
     color: $white;
-
-    @include transition(all .35s ease-in);
+    @include transition(opacity .35s ease-in);
+    &:focus, &:active {
+      @include box-shadow(inset 2px 2px 4px 1px rgba($black, .4));
+    }
   }
 
 
@@ -386,6 +379,17 @@
   &:hover {
     background: $black;
     color: $white;
+    & [class^="icon-"], & [class*=" icon-"] {
+      fill: $white;
+    }
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+    margin-bottom: -.1em;
+    @include transition(all .35s ease-in);
   }
 }
 
@@ -402,14 +406,42 @@
   color: $white;
   padding-bottom: 8em;
 
+
   .about_container {
     @include outer-container;
   }
 
-  .about--title, .about--body  {
-    @include span-columns(8);
-    @include shift(2);
+  .about--title {
+    @include span-columns(12);
+    @include media($mobile-medium) {
+      font-size: 4rem;
+    }
+  }
+
+
+  .about--spencer-image{
+    @include span-columns(4);
+    @include shift(1);
+    border-radius: 100em;
+    @include media($mobile-medium) {
+      @include span-columns(4);
+      @include shift(4);
+    }
+  }
+  .about--words {
+    @include span-columns(6);
     @include omega;
+    margin-top: 1em;
+    @include media($large-xlarge) {
+      padding-left: 2em;
+    }
+    @include media($mobile-medium) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+
+  .about--title, .about--body  {
     color: $white;
   }
 
@@ -421,6 +453,18 @@
       font-weight: 800;
       &:hover {
         border-bottom: 1px solid $black;
+      }
+    }
+  }
+
+  .about--icon-links  {
+    display: flex;
+    justify-content: space-around;
+    [class^="icon-"], [class*=" icon-"] {
+      fill: $white;
+      @include transition(all .2s ease-in);
+      &:hover {
+        fill: $blue-dark;
       }
     }
   }
