@@ -1,4 +1,3 @@
-
 {% extends "_layouts/_master" %}
 
 
@@ -8,15 +7,102 @@
 <div class="contact">
   <div class="contact--backround">
 
-  {% include "_partials/_navigation" %}
+    {% include "_partials/_navigation" %}
 
-  <h1>Make me feel special.<br><small>Send me a special something.</small></h1>
+    <section class="contact--container--inner">
+
+      <header class="contact--header">
+        <h1>Contact me</h1>
+        <aside class="social--icon-links">
+          {% include "_partials/_social-links" %}
+        </aside>
+      </header>
+
+      <div class="ss-form contact--form">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe"
+        style="display:none;" onload="if(submitted)
+        {window.location='{{ siteUrl }}';}"></iframe>
+        <form action="https://docs.google.com/forms/d/10-FGfZx1l4SgAcHy3iZeoA5HKam3SUxmk8PJ6nX4Wao/formResponse" method="post"
+        target="hidden_iframe" onsubmit="submitted=true;">
+
+          <ol role="list" class="ss-question-list" style="padding-left: 0">
+            <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_2097108541"><div class="ss-q-title">Name
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.2097108541" value="" class="ss-q-short" id="entry_2097108541" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+            <div class="error-message" id="793952153_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_826097914"><div class="ss-q-title">Email
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="email" name="entry.826097914" value="" class="ss-q-short" id="entry_826097914" dir="auto" aria-label="Email  real email address, please!" aria-required="true" required="" title="real email address, please!">
+            <div class="error-message" id="84293381_errorMessage">real email address, please!</div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_128784464"><div class="ss-q-title">Website
+            </div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="url" name="entry.128784464" value="" class="ss-q-short" id="entry_128784464" dir="auto" aria-label="Website  valid website urls only, please!" title="valid website urls only, please!">
+            <div class="error-message" id="758487151_errorMessage">valid website urls only, please!</div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1863024672"><div class="ss-q-title">Reason for Message
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+            <ul class="ss-choices" role="radiogroup" aria-label="Reason for Message  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1392342441" value="I'm interested in hiring you for my company" id="group_1392342441_1" role="radio" class="ss-q-radio" aria-label="I'm interested in hiring you for my company" required="" aria-required="true"></span>
+            <span class="ss-choice-label">I'm interested in hiring you for my company</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1392342441" value="I'm interested in hiring you for a project" id="group_1392342441_2" role="radio" class="ss-q-radio" aria-label="I'm interested in hiring you for a project" required="" aria-required="true"></span>
+            <span class="ss-choice-label">I'm interested in hiring you for a project</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1392342441" value="I want to network with you" id="group_1392342441_3" role="radio" class="ss-q-radio" aria-label="I want to network with you" required="" aria-required="true"></span>
+            <span class="ss-choice-label">I want to network with you</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1392342441" value="My friend was too nervous to say hello" id="group_1392342441_4" role="radio" class="ss-q-radio" aria-label="My friend was too nervous to say hello" required="" aria-required="true"></span>
+            <span class="ss-choice-label">My friend was too nervous to say hello</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1392342441" value="__other_option__" id="group_1392342441_5" role="radio" class="ss-q-radio ss-q-other-toggle" required="" aria-required="true"></span>
+            <span class="ss-choice-label">Other:</span></label>
+            <span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.1392342441.other_option_response" value="" class="ss-q-other" id="entry_1392342441_other_option_response" dir="auto" aria-label="Other"></span>
+            </li></ul>
+            <div class="error-message" id="1863024672_errorMessage"></div>
+            <div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good ss-form-question--paragraph-text" role="listitem">
+
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_19448177"><div class="ss-q-title">Message
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.19448177" rows="8" cols="0" class="ss-q-long" id="entry_19448177" dir="auto" aria-label="Message  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="1956399373_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div>
+            <input type="hidden" name="draftResponse" value="[,,&quot;-3840552280969856124&quot;]
+            ">
+            <input type="hidden" name="pageHistory" value="0">
 
 
-  </div>
+            <input type="hidden" name="fbzx" value="-3840552280969856124">
 
+            <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+            <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action button">
+            </td>
+            </tr></tbody></table></div>
+          </ol>
+        </form>
+      </div> {# /ss-form #}
 
-</div>
+    </section>  {# /contact--container--inner #}
+
+  </div>  {# / contact--background #}
+</div> {# /Contact #}
 
 
 {% endblock %}

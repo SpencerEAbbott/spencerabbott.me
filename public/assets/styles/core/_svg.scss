@@ -1,13 +1,13 @@
-// demo.css
-
-
-
 // Style.css
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   fill: $black;
   width: 3em;
   height: 3em;
+  @include media($mobile-small) {
+    width: 2em;
+    height: 2em;
+  }
 }
 
 

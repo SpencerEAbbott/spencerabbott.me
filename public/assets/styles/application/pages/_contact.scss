@@ -1,9 +1,168 @@
 // Page specific style includes
 
 .contact--backround {
-  background-color: $black;
+  background-color: $blue;
   min-height: 100vh;
-  h1 {
+  h1, h2, h3, h4, h5, p {
     color: $white;
   }
+
 }
+
+.contact--container--inner {
+  @include outer-container;
+  @include media($large-xlarge) {}
+}
+
+.contact--header {
+  @include span-columns(8);
+  @include shift(2);
+}
+
+
+.contact--container--inner .social--icon-links {
+  @include display(flex);
+  @include justify-content(space-around);
+  [class^="icon-"], [class*=" icon-"] {
+    fill: $white;
+    @include transition(all .2s ease-in);
+    &:hover {
+      fill: $blue-light;
+    }
+  }
+}
+
+.contact--form {
+  @include span-columns(10);
+  @include shift(1);
+  margin-top: 3em;
+  margin-bottom: 8em;
+}
+
+.ss-question-list {
+  margin-left: 0;
+}
+
+.ss-form-question {
+  @include span-columns(5 of 10);
+  @include omega(even);
+  &:nth-child(even) {
+    // @include shift(1);
+  }
+  margin-bottom: 3em;
+  .ss-paragraph-text, &.ss-form-question--paragraph-text {
+    width: 100%;
+    #entry_19448177 {
+      width: 100%;
+    }
+  }
+  @include media($mobile-medium) {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    // margin-right: 10%;
+    // &:nth-child(even) {
+    //   margin-right: 0;
+    // }
+  }
+}
+
+.ss-q-title {
+  margin-bottom: .5em;
+}
+
+.ss-form-question--message {
+  float: left;
+  width: 100%;
+}
+
+.ss-choices {
+  padding-left: 0;
+  .ss-choice-item {
+    list-style: none;
+  }
+  .ss-choice-item-control, .ss-choice-label{
+    display: inline-block;
+  }
+  .ss-choice-item-control {
+    width: 5%;
+  }
+  .ss-choice-label {
+    width: 90%;
+  }
+  .ss-q-other-container {
+    display: inline-block;
+    margin: .5em 0 0 5%;
+    width: 95%;
+  }
+}
+
+
+label {
+  font-family:  $headerfont;
+  color: $white;
+  font-weight: 600;
+}
+
+.required-message, .error-message {
+  display: none;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid $black;
+  border-radius: 0;
+}
+
+textarea {
+  border: 2px solid rgba($blue-light, .3);
+}
+
+textarea:focus {
+  border: 2px solid $black !important;
+}
+
+#inner-editor {
+  color: $black;
+  // @include font-base;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+#navigation-table {
+  border: none;
+}
+
+#navigation-buttons {
+  border: none;
+}
+
+
+.ss-navigate {
+  position: relative;
+  float: left;
+  width: 100%;
+  #navigation-table {
+    position: relative;
+    left: 50%;
+    @include transform (translateX(-50%));
+  }
+}
+
+
+
+input#ss-submit.button{
+  position: relative;
+  background: $blue-dark;
+  border-color: $white;
+  color: $white;
+  padding: 1.5em 5.5em;
+  @include transition (all .4s ease-out);
+  &:hover {
+    color: $blue-dark;
+    background: $white;
+    border-color: $white;
+  }
+}
+

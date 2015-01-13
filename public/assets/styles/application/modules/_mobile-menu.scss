@@ -1,6 +1,9 @@
 // Source:
 // http://www.cssscript.com/css3-only-off-canvas-navigation-with-animated-toggle-icon/
 
+// https://www.internetkultur.at/simple-hamburger-drop-down-menu-with-css-and-jquery/
+
+
 
 .HiddenCheckbox { display: none; }
 
@@ -128,7 +131,7 @@
   display: inline-block;
   text-align: center;
   left: 50%;
-  transform: translatex(-50%);
+  @include transform(translateX(-50%));
   overflow: hidden;
   font-family: $headerfont;
   font-weight: 800;

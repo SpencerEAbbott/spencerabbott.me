@@ -16,7 +16,7 @@ $customDbConfig = array(
     // Live database info
     'server'    => '104.236.136.50',
     'user'      => 'root',
-    'password'  => 'HUiBUTxtQm',
+    'password'  => 'ihvE6LJF9j',
     'database'  => 'spencer_craft'
   ),
 

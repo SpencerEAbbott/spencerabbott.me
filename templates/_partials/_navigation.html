@@ -1,25 +1,18 @@
 
 <nav class="main_nav">
   <header class="main_nav--header">
-    <a href="{{ siteUrl }}" alt="Spencer Abbott">
-      <svg version="1.1" id="header-logo" x="0px" y="0px"
-          viewBox="0 0 830.5 168.171" enable-background="new 0 0 830.5 168.171" xml:space="preserve">
-        <text transform="matrix(1 0 0 1 0 92.4751)" font-family="'Raleway-Black'" font-size="108.1585">Spencer Abbott</text>
-        <text transform="matrix(1 0 0 1 1.0039 156.4995)" font-family="'Raleway-Bold'" font-size="50.965">Front End Delopment • UX Design</text>
-      </svg>
-    </a>
-
+    <a href="{{ siteUrl }}" alt="Spencer Abbott">{% include "_partials/_logo-header-svg" %}</a>
   </header>
 
    {# Desktop Menu #}
   <section class="deskop-navigation--container">
-    {# Animate a hover state. Subtle but unique. Helpful. Possibly add CSS transitions to pages via CSS-Tricks #}
+
     <a class="desktop-nav-item" href="{{ siteUrl }}#work">Portfolio</a>
-{#     <a class="desktop-nav-item"href="{{ siteUrl }}#about">About</a> #}
+    {# <a class="desktop-nav-item"href="{{ siteUrl }}#about">About</a> #}
     <a class="desktop-nav-item" href="{{ siteUrl }}contact">Contact</a>
     <a class="desktop-nav-item" href="{{ siteUrl }}blog">Blog</a>
 
-
+  {# Mobile Menu Menu #}
   <div class="mobile-navigation--container">
     <input id="menu" type="checkbox" name="menu" class="HiddenCheckbox"/>
       <label for="menu" class="MenuIcon"></label>

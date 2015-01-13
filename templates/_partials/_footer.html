@@ -1,19 +1,20 @@
+<footer>
+  <section class="footer--container">
 
-    <!-- ****************
-    Footer Partial
-    **************** -->
-    <footer>
-      <div class="footer_container">
-        <h3 style="color: white;">It's not magic, just hard work.</h3>
-        <aside class="welcome_email">
-          <a href="mailto:SpencerEAbbott@gmail.com">Email me</a>
-        </aside>
-        <section class="footer-list">
-          <ul>
-            <a href="#"><li>Work</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Blog</li></a>
-          </ul>
-        </section>
-      </div>
-    </footer>
+    <nav class="footer--navigation">
+      <ul>
+      <a class="footer--nav-item" href="{{ siteUrl }}#work">Portfolio</a>
+      {# <a class="desktop-nav-item"href="{{ siteUrl }}#about">About</a> #}
+      <a class="footer--nav-item" href="{{ siteUrl }}contact">Contact</a>
+      <a class="footer--nav-item" href="{{ siteUrl }}blog">Blog</a>
+      </ul>
+    </nav>
+
+    <aside class="social--icon-links">
+      {% include "_partials/_social-links" %}
+    </aside>
+
+    <p class="footer--copyright"><small>Copyright © 2010-2015 <a href="{{ siteUrl }}">This Is It, LLC</a>. All rights reserved.</small></p>
+
+  </section>
+</footer>

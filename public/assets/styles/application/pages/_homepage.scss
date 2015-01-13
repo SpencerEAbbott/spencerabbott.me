@@ -11,6 +11,7 @@
     min-height: 37em;
   }
   height: 100vh;
+  max-height: 100vh;
   min-height: 37em;
 }
 
@@ -18,17 +19,17 @@
 
 .welcome_wrapper {
   @include outer-container;
+  position: relative;
   max-width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  height: 100%;
   .welcome {
     @include outer-container;
     // margin-top: 5em;
     position: relative;
-    top: 40%;
-    transform: translateY(-50%);
-  }
-  .button--arrow-down {
-
+    // top: 40%;
+    top: calc(50% - 5.7em);
+    @include transform(translateY(-50%));
   }
 }
 
@@ -149,9 +150,27 @@
     }
   }
 
-  // .work--example.ui-tabs-active {
-  //   opacity: .2;
-  // }
+  .work--example:after {
+    @include media($large-xlarge) {
+      content: '';
+      display: block;
+      height: 1em;
+      width: 1em;
+      position: relative;
+      margin: 2em auto 0;
+      background-color: transparent;
+      border: 1px solid $white;
+      border-radius: 100%;
+      @include transition(all .3s ease-in);
+
+    }
+  }
+
+  .work--example.ui-tabs-active:after {
+    @include media($large-xlarge) {
+    }
+    background-color: $white;
+  }
 
 
   .work--example--spencerabbott  {;
@@ -209,7 +228,7 @@
     display: inline-block;
     position: relative;
     top: 50%;
-    @include transform(translatey(-50%));
+    @include transform(translateY(-50%));
     margin-top: 0;
     margin-bottom: 0;
     padding: 1em;
@@ -218,6 +237,9 @@
     opacity: 0;
     color: $white;
     @include transition(opacity .35s ease-in);
+    @include media($mobile-medium) {
+      font-size: 1em;
+    }
     &:focus, &:active {
       @include box-shadow(inset 2px 2px 4px 1px rgba($black, .4));
     }
@@ -253,8 +275,11 @@
     font-size: 4rem;
     margin-bottom: .2em;
     // color: $red;
-    @include media($mobile-medium) {
+    @include media($small-medium) {
       font-size: 2em;
+    }
+    @include media($mobile) {
+      font-size: 1.6em;
     }
   }
 
@@ -272,8 +297,11 @@
     margin-top: 0;
     z-index: 2;
     position: relative;
-    @include media($mobile-medium) {
+    @include media($small-medium) {
       font-size: 1.5rem;
+    }
+    @include media($mobile) {
+      font-size: 1rem;
     }
     & span {
       padding: 0 1em;
@@ -363,19 +391,24 @@
 
 
 .button-container {
-  display: inline-flex;
+  display: block;
+  float: left;
   width: 100%;
-  justify-content: space-around;
+  position: relative;
 }
 
 
 .button--example {
   @extend .button-base;
+  position: relative;
+  left: 50%;
+  @include transform(translateX(-50%));
   text-align: center;
   margin-top: 1em;
   border: 1px solid $black;
   color: $black;
   border-color: $black;
+
   &:hover {
     background: $black;
     color: $white;
@@ -460,6 +493,11 @@
   .about--icon-links  {
     display: flex;
     justify-content: space-around;
+    @include display(flex);
+    @include justify-content(space-around);
+  // @include align-items(stretch);
+  // @include flex-direction(row);
+
     [class^="icon-"], [class*=" icon-"] {
       fill: $white;
       @include transition(all .2s ease-in);
@@ -468,14 +506,11 @@
       }
     }
   }
-}
 
-
-footer {
-  background: black;
-  .footer_container {
-    @include outer-container;
+  .button--arrow-up {
+    display: none;
   }
+
 }
 
 
@@ -494,4 +529,5 @@ border-radius: .4em;
 -webkit-transition: all .2s ease-in;
 transition: all .2s ease-in;
 }
+
 

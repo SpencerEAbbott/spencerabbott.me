@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     map = require('map-stream'),
     notify = require('gulp-notify'),
-    autoprefixer = require('gulp-autoprefixer'),
+    w = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     scsslint = require('gulp-scsslint'),
     minifycss = require('gulp-minify-css'),
@@ -72,7 +72,7 @@ gulp.task('styles', function(){
         }
       })
     )
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe( gulp.dest(DIST + '/styles') )
